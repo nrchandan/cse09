@@ -35,7 +35,7 @@
           "wget -b -O output/log.txt --user=witcracker --password=secretpassword www.myhome.in/config_lab.py"
         ],
         "build_steps": {
-          "configure": ["cp -fr cse09/source/ /var/www/"],
+          "configure": ["cp -fr /root/VMManager/cse09/source/ /var/www/"],
           "pre_build": ["make clean"],
           "build": ["make lab", "make install"],
           "post_build": ["make clean"],
