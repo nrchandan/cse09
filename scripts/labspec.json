@@ -33,7 +33,7 @@
           "pre_build": ["make clean"],
           "build": ["make lab", "make install"],
           "post_build": ["make clean"],
-          "status": ["ls"]
+          "status": []
         }
       }
     },
