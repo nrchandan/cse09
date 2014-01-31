@@ -28,9 +28,6 @@
         "arch": "i386",
         "service_pack": "",
         "installer": [
-          "sudo apt-get -y install libxml2",
-          "sudo apt-get -y install libnss3",
-          "sudo apt-get -y install python2.7",
           "sudo apt-get -y install curl",
           "wget -b -O output/log.txt --user=witcracker --password=secretpassword www.myhome.in/config_lab.py"
         ],
