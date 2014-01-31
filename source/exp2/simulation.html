@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Breaking the Mono-alphabetic Substitution Cipher</title>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+  </head>
+  <body>
+
+  <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Breaking the Mono-alphabetic Substitution Cipher</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+    <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title">Breaking the Mono-alphabetic Substitution Cipher</p>
+    </div>
+
+      <div class="manual-section">
+        <p class="manual-section-title">Simulation</p><hr />
+        <div class="manual-section-description">
+      <p>PART I</p>
+<p>Decrypt the following cipher text. A tool to simulate the
+Mono-Alphabetic Subsitution cipher is provided beneath for your
+assistance.
+</p>
+<p>Here is the table of frequencies of English alphabets for your reference:</p>
+<div style="text-align: center;">
+<table ;="" bgcolor="black" border="0" cellpadding="3" cellspacing="1"> 
+<tbody><tr> 
+<td ;="" bgcolor="white"><b>a</b></td> <td ;="" bgcolor="white"><b>b</b></td> <td ;="" bgcolor="white"><b>c</b></td> <td ;="" bgcolor="white"><b>d</b></td> 
+<td ;="" bgcolor="white"><b>e</b></td> <td ;="" bgcolor="white"><b>f</b></td> <td ;="" bgcolor="white"><b>g</b></td> <td ;="" bgcolor="white"><b>h</b></td> 
+<td ;="" bgcolor="white"><b>i</b></td> <td ;="" bgcolor="white"><b>j</b></td> <td ;="" bgcolor="white"><b>k</b></td> <td ;="" bgcolor="white"><b>l</b></td> 
+<td ;="" bgcolor="white"><b>m</b></td> 
+</tr><tr>
+<td ;="" bgcolor="white">8.167</td> <td ;="" bgcolor="white">1.49</td> <td ;="" bgcolor="white">2.782</td> <td ;="" bgcolor="white">4.253</td> 
+<td ;="" bgcolor="white">12.702</td> <td ;="" bgcolor="white">2.228</td> <td ;="" bgcolor="white">2.015</td> <td ;="" bgcolor="white">6.094</td> 
+<td ;="" bgcolor="white">6.966</td> <td ;="" bgcolor="white">0.153</td> <td ;="" bgcolor="white">0.772</td> <td ;="" bgcolor="white">4.025</td> 
+<td ;="" bgcolor="white">2.406</td> 
+</tr>
+<tr>
+<td ;="" bgcolor="white"><b>n</b></td> <td ;="" bgcolor="white"><b>o</b></td> <td ;="" bgcolor="white"><b>p</b></td> 
+<td ;="" bgcolor="white"><b>q</b></td> <td ;="" bgcolor="white"><b>r</b></td> <td ;="" bgcolor="white"><b>s</b></td> <td ;="" bgcolor="white"><b>t</b></td> 
+<td ;="" bgcolor="white"><b>u</b></td> <td ;="" bgcolor="white"><b>v</b></td> <td ;="" bgcolor="white"><b>w</b></td> <td ;="" bgcolor="white"><b>x</b></td> 
+<td ;="" bgcolor="white"><b>y</b></td> <td ;="" bgcolor="white"><b>z</b></td>
+</tr><tr>
+<td ;="" bgcolor="white">6.749</td> <td ;="" bgcolor="white">7.507</td> <td ;="" bgcolor="white">1.929</td> 
+<td ;="" bgcolor="white">0.095</td> <td ;="" bgcolor="white">5.987</td> <td ;="" bgcolor="white">6.327</td> <td ;="" bgcolor="white">9.056</td> 
+<td ;="" bgcolor="white">2.758</td> <td ;="" bgcolor="white">0.978</td> <td ;="" bgcolor="white">2.360</td> <td ;="" bgcolor="white">0.150</td> 
+<td ;="" bgcolor="white">1.974</td> <td ;="" bgcolor="white">0.074</td> 
+</tr></tbody></table> </div>
+<p>
+                <textarea name="textarea" cols="70" rows="6" readonly="readonly" id="textarea"></textarea><br/>
+                <input name="btnEn2" value="Next Ciphertext" onclick="Next_Mono_Test()" type="button">
+              </p>
+        <p> <input name="calculateFreq" value="Calculate Frequencies in ciphertext" onclick="CalculateFreq();" type="button">  </p>
+              <p>Ciphertext Frequencies:<br>
+                </p><div id="cipherFreq" style="height: 150px;"></div>
+              <p></p>
+<br/><hr/><br/>
+
+      <p>PART II</p>
+        <p>Note that the <i>cipher text is in lower case</i> and when you replace any character, the final character of replacement, i.e., <i>plaintext is changed to upper case</i> automatically in the following scratchpad.</p>
+              <p>Scratchpad:<br>
+                <textarea id="textarea2" name="textarea" rows="10" cols="70"></textarea>
+              </p>
+
+        <p>Modify the text above (in scratchpad):</p>
+        <p><font size="1">This is case <i>insensitive</i> function and replaces only cipher text (lower case) by plain text (upper case):</font></p>
+        <p>Replace cipher character &nbsp; <textarea id="char1" rows="1" cols="2" style="display: inline;"></textarea> by plaintext character &nbsp;&nbsp;<textarea id="char2" rows="1" cols="2" style="display: inline;"></textarea> &nbsp;&nbsp; <input name="btnModify" value="Modify" onclick="ModifyUserText()" style="display: inline;" type="button"></p>
+        <p><font size="1">Use the following function to undo any unwanted exchange by giving an
+uppercase character and a lower case. This is a case sensitive function:</font></p>
+        <br>&nbsp;&nbsp;&nbsp;<p>Replace character &nbsp; <textarea id="char3" rows="1" cols="2" style="display: inline;"></textarea> by character &nbsp;&nbsp;<textarea id="char4" rows="1" cols="2" style="display: inline;"></textarea> &nbsp;&nbsp; <input name="btnModify" value="Replace these exact characters" onclick="ModifyUserText2()" style="display: inline;" type="button"></p>
+        <p>Your replacement history:
+              </p><div id="replacements" style="height: 350px; width: 350px;"></div>
+        <p></p>
+
+<br/><hr/><br/>
+      <p><b>PART III</b></p>
+              <p>Enter your solution plaintext here:<br>
+                <textarea id="textarea3" name="textarea2" rows="5" cols="70"></textarea>
+              </p>
+            <p>Solution Key = 
+              <input id="key2" name="key2" size="26" maxchars="25" type="text">
+            </p><br>
+      <p><input name="Check" value="Check Answer!" onclick="checkAnswer()" type="button"></p><br><br>
+      <textarea id="notification" name="notification" rows="1" cols="50" style="border: 0pt none ;"></textarea>
+
+
+      <br/><hr><br/>
+      <p><b>PART IV</b></p>
+      
+
+      <p>Plaintext<br>
+      <textarea id="p" name="p" rows="2" cols="50">defend the east wall of the castle</textarea>
+              </p><p>key =
+                <input id="key" name="key" size="25" maxchars="25" value="phqgiumeaylnofdxjkrcvstzwb" type="text">
+                  <input name="genKey" value="Generate Random Key" onclick="Mono_GenRandKey()" type="button">
+              </p>
+              <p>
+                <input name="btnEn" value="v Encrypt v" onclick="Mono_Encrypt()" type="button">
+                <input name="btnDe" value="^ Decrypt ^" onclick="Mono_Decrypt()" type="button">
+              </p>
+              <p>
+                <input id="punc" name="punc" type="checkbox">
+                Remove Punctuation</p>
+              <p>Ciphertext<br>
+                  <textarea id="c" name="c" rows="2" cols="50"></textarea>
+                  </p>
+        </div>
+    </div>
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../js/exp2.js"></script> 
+  </body>
+</html>

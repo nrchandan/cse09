@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BS3:Cryptography</title>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="bstyle.css">
+  <link rel="stylesheet" type="text/css" href="overlay.css"> <!--style for overlay color changer, 
+  will be removed in production-->
+  <script type="text/javascript" src="colorchanger.js"></script> <!--script for overlay color changer-->
+  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="colorChange('#2c373b','#cbd3d5');">
+
+  	<nav class="navbar navbar-default visible-lg" role="navigation">
+  		<!-- Brand and toggle get grouped for better mobile display -->
+  		<div class="navbar-header">
+  			<a class="navbar-brand" href="#">Cryptography</a>
+  		</div>
+
+  		<!-- Collect the nav links, forms, and other content for toggling -->
+  		<div class="desk-nav">
+  			<ul class="nav navbar-nav">
+  				<li style="border-right: 1.5px solid white;"><a href="index.html">Home</a></li>
+  				<li style="border-right: 1.5px solid white;"><a href="about.html">About this lab</a></li>
+  				<li><a href="#">Explore Vlabs</a></li>
+  			</ul>
+  			
+  			<ul class="nav navbar-nav navbar-right visible-lg">
+  				<li><div class="icons"><img src="../images/iiit.png"></div></li>
+  				<li><div class="icons"><img src="../images/vlabs.png"></div></li>
+  			</ul>
+  		</div><!-- /.navbar-collapse -->
+  	</nav>
+
+      <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    	<a href="index.html"><span class="glyphicon glyphicon-home"></span></a><a href="about.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="#"><span class="glyphicon glyphicon-send"></span></a>
+  	  </div>
+      </nav>
+    <p class="experiment-mobile-title">Cryptography</p>
+    </div>
+
+<div class="colorchanger">
+  <button type="button" id="color1" onclick="colorChange('#3652a4','#ced8ef');" class="btn btn-primary"></button>
+  <button type="button" id="color2" onclick="colorChange('#428bca','#E3ECF3');" class="btn btn-primary"></button>
+  <button type="button" id="color3" onclick="colorChange('#7FBC7C','#D4E9D3');" class="btn btn-primary"></button>
+  <button type="button" id="color4" onclick="colorChange('#2c373b','#cbd3d5');" class="btn btn-primary"></button>
+</div>
+
+    <div class="row">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title"><a href="exp1/index.html">1. Breaking the Shift Cipher</a></p>
+        <div class="img-thum">
+          <img class="experiment-thumbnail" src="imgs/exp1.png">
+        </div>
+        
+        <div class="experiment-description">
+        <p>Apparently, the system is easily broken if the total number of distinct secret keys is small, that is the key space K is small.</p>
+<p>In this experiment, we work with a well-known historical encryption scheme, namely the shift cipher, that has a very small key space.</p>
+<p>Your task is to break the shift cipher. Specifically, given (only) the ciphertext in some instance of a shift cipher, you need to find the plaintext and the secret key.</p>
+          </div>
+        <p class="experiment-outcome">To understand that secure encryption is not possible with small keyspace. This is more popularly  known as the principle of large key space</p>
+        <p class="experiment-prereq"></p>
+        
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title"><a href="exp2/index.html">2. Breaking the Mono-alphabetic Substitution Cipher</a></p>
+        
+        <div class="img-thum">
+          <img class="experiment-thumbnail" src="imgs/exp2.png">
+        </div>
+        
+        
+        <div class="experiment-description">
+          <p>A transformation maps points in space to other points. Translation moves every point by a constant distance in a constant direction. This can be interpreted as the addition of a constant vector to every point. Using homogeneous representation, translation can be conveniently represented as a matrix multiplication.</p> 
+        </div>
+        <p class="experiment-outcome">Objective of this experiment is to understand the effect of translation on Points in 2D/3D space. We also learn the matrix representation for the translation and how to use it to compute the translated point.</p>
+        <p class="experiment-prereq"></p>
+        
+
+      </div>
+    </div>
+  	</div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title"><a href="exp3/index.html">3. One-Time Pad and Perfect Secrecy</a></p>
+
+
+        <div class="img-thum">
+         <img class="experiment-thumbnail" src="imgs/exp3.png">
+       </div>
+
+
+       <div class="experiment-description">
+        <p>Rotation transforms points about an axis through the origin. In Computer Graphics, rotation is performed by multiplying a point with a rotation matrix. There are specific matrices for rotations about X, Y and Z axes. To rotate about a particular point, the point must be translated to origin first, and then the point must be translated back to its original location.</p>
+      </div>
+      <p class="experiment-outcome">Objective of this experiment is to understand the effect of rotation about an axis on Points in 2D/3D space. We also learn the matrix representation for the translation and how to use it to compute the translated point.</p>
+      <p class="experiment-prereq"></p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="experiment-card">
+      <p class="experiment-title"><a href="exp4/index.html">4. Message Authentication Codes</a></p>
+
+
+      <div class="img-thum">
+       <img class="experiment-thumbnail" src="imgs/exp4.png">
+     </div>
+
+
+     <div class="experiment-description">
+      <p> Scaling multiplies the x, y, and z components of a point by three (potentially different) constant factors - k1, k2, and k3. A geometric object is uniformly scaled When k1=k2=k3. In other words, the object will be enlarged or shrunk equally in all three planes. The object will be Non-uniform scaled when at least one of the scaling factors is different from the others.
+      </p> 
+    </div>
+    <p class="experiment-outcome">Objective of this experiment is to understand the effect of scaling on Points along any axis in 2D/3D space. We also learn the matrix representation for the scaling transformation and how to use it to compute the scaled point.</p>
+    <p class="experiment-prereq"></p>
+
+  </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title"><a href="exp5/index.html">5. Cryptographic Hash Functions and Applications</a></p>
+        <div class="img-thum">
+         <img class="experiment-thumbnail" src="imgs/exp5.png">
+       </div>
+
+
+       <div class="experiment-description">
+        <p>This experiment demonstrates hierarchical transformations as a series of operations applied on a triangle. It starts with a scaling transformation, followed by a translation, rotation and another translation. The simulation lets you reorder the transformations showing that translation and scaling operations are commutative while rotations are not. </p>
+      </div>
+      <p class="experiment-outcome">Objective of this experiment is to understand the effective tranformation due to a series of transformations. We also learn the matrix representation for the computing the effective transformation.</p>
+      <p class="experiment-prereq"></p>
+
+
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="experiment-card">
+      <p class="experiment-title"><a href="exp6/index.html">6. Symmetric Key Encryption Standards (DES)</a></p>
+
+
+      <div class="img-thum">
+       <img class="experiment-thumbnail" src="imgs/exp6.png">
+     </div>
+
+
+     <div class="experiment-description">
+         <p>
+      An arm of a robot may be modeled as a collection of hierarchical objects. In order to perform transformations on a heirarchical composite, one needs to compose a series of transformations on the constituent parts. This experiment demonstrates how to encode such operations as a series of matric operations representing basic transformations.  
+      </p> 
+    </div>
+    <p class="experiment-outcome">Objective of this experiment is to understand the effective tranformation due to a series of transformations and how to construct a hierarchical model.</p>
+    <p class="experiment-prereq"></p>
+
+  </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title"><a href="exp7/index.html">7. Symmetric Key Encryption Standards (AES)</a></p>
+        <div class="img-thum">
+         <img class="experiment-thumbnail" src="imgs/exp7.png">
+       </div>
+
+
+       <div class="experiment-description">
+        <p>3D projection is any method of mapping three dimensional points to a two-dimensional plane represented by the viewport of the computer screen. There are two types of projections: Orthographic and Perspective. In orthographic projection, an object is depicted using parallel lines to project its shape onto a plane. Orthographic projections are mostly used to show the details or precise measurements of a three dimensional object. On the other hand, when the human eye views a scene, objects in the distance appear smaller than objects close by - this is known as perspective. A perspective definition projection depicts distant objects as smaller in order to provide additional realism.</p>
+      </div>
+      <p class="experiment-outcome">Objective of this experiment is to understand different projections and their matrix representations to project a 3D point. We also learn how to define an OpenGL camera and its various parameters effectively visualising the result.</p>
+      <p class="experiment-prereq"></p>
+
+
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="experiment-card">
+      <p class="experiment-title"><a href="exp8/index.html">8. Diffie-Hellman Key Establishment</a></p>
+
+
+      <div class="img-thum">
+       <img class="experiment-thumbnail" src="imgs/exp8.png">
+     </div>
+
+
+     <div class="experiment-description">
+      <p>This experiment demonstrates the steps of Cohen-Sutherland line clipping algorithm. The algorithm divides a two-dimensional space into nine regions, and then efficiently determines the lines and portions of lines that are visible in the viewport. It uses a divide-and-conquer strategy to determine if the line segment's endpoints are within the viewport. 
+      </p> 
+    </div>
+    <p class="experiment-outcome">Objective of this experiment is to understand the steps of a Line Clipping Algorithm, i.e., how a geometric line is clipped so as to render only the part which a user can view. As an example, we have demonstrated the steps of Cohen Sutherland Algorithm.</p>
+    <p class="experiment-prereq"></p>
+
+  </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title"><a href="exp9/index.html">9. Public-Key Cryptosystems (PKCSv1.5)</a></p>
+        <div class="img-thum">
+         <img class="experiment-thumbnail" src="imgs/exp9.png">
+       </div>
+
+
+       <div class="experiment-description">
+        <p>The Sutherland-Hodgman clipping algorithm finds the polygon that is the intersection between an arbitrary polygon (the “subject polygon”) and a convex polygon (the “clip polygon”). The algorithm begins with an input list of all vertices in the subject polygon. Next, one side of the clip polygon is extended infinitely in both directions, and the path of the subject polygon is traversed. Vertices from the input list are inserted into an output list if they lie on the visible side of the extended clip polygon line, and new vertices are added to the output list where the subject polygon path crosses the extended clip polygon line. This process is repeated iteratively for each clip polygon side, using the output list from one stage as the input list for the next. Once all sides of the clip polygon have been processed, the final generated list of vertices defines a new single polygon that is entirely visible.</p>
+      </div>
+      <p class="experiment-outcome">Objective of this experiment is to understand the steps of a Polygon Clipping Algorithm, i.e., how a polygon is clipped so as to render only the part which a user can view. As an example, we have demonstrated the steps of Sutherland Hodgeman Algorithm.</p>
+      <p class="experiment-prereq"></p>
+
+
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="experiment-card">
+      <p class="experiment-title"><a href="exp10/index.html">10. Digital Signatures</a></p>
+
+
+      <div class="img-thum">
+       <img class="experiment-thumbnail" src="imgs/exp10.png">
+     </div>
+
+
+     <div class="experiment-description">
+      <p>The Bresenham line algorithm determines which points should be plotted in order to form a close approximation to a straight line between the given two points. This algorithm provides the means for a fast and efficient way to represent continuous abstract lines onto discrete plane of computer display. This process is called rasterization. 
+    </p> 
+    </div>
+    <p class="experiment-outcome">Objective of this experiment is to understand the steps of a Line Rasterization Algorithm, i.e., how a geometric line is converted to pixels in a 2D frame buffer. As an example, we have demonstrated the steps of Bresenham's Line Rasterization algorithm here.</p>
+    <p class="experiment-prereq"></p>
+
+  </div>
+</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

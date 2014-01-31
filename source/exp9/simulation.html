@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Public-Key Cryptosystems</title>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+  </head>
+  <body>
+
+  <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Public-Key Cryptosystems</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+    <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title">Public-Key Cryptosystems</p>
+    </div>
+
+      <div class="manual-section">
+        <p class="manual-section-title">Simulation</p><hr />
+        <div class="manual-section-description">
+          <p>
+         <form name="rsatest" onsubmit="do_encrypt();return false;">
+      <p>Plaintext (string):</p><br>
+      <p><input name="plaintext" value="test" size="60" type="text"><br>
+
+      <input value="encrypt" onclick="do_encrypt();" type="button"></p>
+      <p>
+      Ciphertext (hex):<br>
+      <textarea name="ciphertext" rows="4" cols="70"></textarea><br>
+      <input value="decrypt" onclick="do_decrypt();" type="button"></p><p>
+      Decrypted Plaintext (string):<br>
+      <input name="decrypted" size="60" type="text"></p><p>
+      Status:<br>
+      <input name="status" size="60" type="text"></p><p>
+      </p><hr>
+      <h2>RSA private key</h2><p>
+      <input value="1024 bit" onclick="set_1024f4();" type="button">
+      <input value="1024 bit (e=3)" onclick="set_1024e3();" type="button">
+
+      <input value="512 bit" onclick="set_512f4();" type="button">
+      <input value="512 bit (e=3)" onclick="set_512e3();" type="button">
+      &nbsp; <input value="Generate" onclick="do_genrsa();" type="button">
+      bits = <input name="bits" value="512" size="10" type="text">
+      </p><p>
+      Modulus (hex):<br>
+      <textarea name="n" type="text" rows="4" cols="70"></textarea></p><p>
+      Public exponent (hex, F4=0x10001):<br>
+      <input name="e" value="3" size="20" type="text"></p><p>
+      Private exponent (hex):<br>
+      <textarea name="d" type="text" rows="4" cols="70"></textarea></p><p>
+
+      P (hex):<br>
+      <textarea name="p" type="text" rows="2" cols="70"></textarea></p><p>
+      Q (hex):<br>
+      <textarea name="q" type="text" rows="2" cols="70"></textarea></p><p>
+      D mod (P-1) (hex):<br>
+      <textarea name="dmp1" type="text" rows="2" cols="70"></textarea></p><p>
+      D mod (Q-1) (hex):<br>
+      <textarea name="dmq1" type="text" rows="2" cols="70"></textarea></p><p>
+      1/Q mod P (hex):<br>
+
+      <textarea name="coeff" type="text" rows="2" cols="70"></textarea></p>
+    </form>
+            
+          </p>
+        </div>
+    </div>
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../js/exp10/base64.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp10/jsbn.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp10/jsbn2.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp10/prng4.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp10/rng.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp10/rsa.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp10/rsa2.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp10/pkcs.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp10/rss.dss.js"></script>
+ 
+  </body>
+</html>

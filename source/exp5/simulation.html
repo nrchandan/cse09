@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Cryptographic Hash Functions and Applications(HMAC)</title>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+  </head>
+  <body>
+
+  <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"> Cryptographic Hash Functions and Applications(HMAC)</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+    <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title"> Cryptographic Hash Functions and Applications(HMAC)</p>
+    </div>
+
+      <div class="manual-section">
+        <p class="manual-section-title">Simulation</p><hr />
+        <div class="manual-section-description">
+        <!--<script type="text/javascript" src="../js/exp1.js"></script>-->
+            
+    <p></div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+
+          <h1 style="text-align: center; text-decoration: underline;">A simulator for SHA-1</h1>
+
+ <p>Plaintext (string): </p><p><input name="user_input" value="test" id="input" size="40" type="text"> </p>
+<p><input onclick="document.getElementById('hash_value').value = hex_sha1(document.getElementById('input').value)" value="SHA-1" type="button"></p><br>
+
+<p>Hash output(hex):</p><p> <input id="hash_value" value="" size="40" readonly="true" type="text"></p><br>
+<br>
+<br>
+<h1 style="text-align: center; font-weight: bold; text-decoration: underline;">HMAC Construction using a "Dummy" Hash Function<br>
+</h1>
+<br>
+
+             
+            <h2>HMAC construction</h2>
+      
+<pre>   Plaintext: <textarea name="plaintext" cols="50" rows="4" id="plaintext">1100000000111100101010</textarea>   <input name="changePlainText" value="Next Plaintext" onclick="next_plain_text()" type="button"> <br>
+length of Initialization Vector (IV), l, <textarea name="l" cols="4" rows="1" id="l">8</textarea> <br>
+          IV: <textarea name="iv" cols="50" rows="1" id="iv">11001100</textarea>   <input name="changeIV" value="Next IV" onclick="next_IV()" type="button"><br><br><br>
+      Key, k: <textarea name="key" cols="50" rows="1" id="key">10000101</textarea>   <input name="changeKey" value="Next Key" onclick="next_Key()" type="button"><br><br><br>
+ipad: 0x5C (01011100)
+opad: 0x36 (00110110) <br>
+Put your text of size 2l to get the corresponding value of hash of size l.<br>
+   Your text: <textarea name="usertext" cols="50" rows="1" id="usertext">11001010</textarea>   <input name="getHash" value="get hash" onclick="get_hash()" type="button">
+Hashed value: <textarea name="hashvalue" cols="50" rows="1" readonly="readonly" id="hashvalue">0011</textarea><br><br>
+Final Output: <textarea name="output" cols="50" rows="1" id="cipherarea"></textarea>  <input name="checkAnswer" value="Check Answer!" onclick="checkAnswer()" type="button">
+<div id="notification" style="width: 300px; height: 10px; padding-top: 20px;"></div>
+</pre>
+        </div>
+    </div>
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+<script type="application/javascript" src="../js/exp6/hmac.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/jsbn.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/sha1.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/base64.js"></script> 
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/hmac.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/jsbn2.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/prng4.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/rng.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/rsa.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/rsa2.js"></script>
+  <script language="JavaScript" type="text/javascript" src="../js/exp6/rsa-dss.js"></script> 
+  </body>
+</html>

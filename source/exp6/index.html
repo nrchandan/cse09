@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> From DES to 3-DES</title>
+  <link rel="stylesheet" type="text/css" href="../../normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+</head>
+    <body>
+
+      <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"> From DES to 3-DES</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title"> From DES to 3-DES</p>
+    </div>
+
+<div class="row">
+  <div class="col-lg-2 visible-lg lab-index">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#intro">Introduction</a></li>
+      <li><a href="#theory">Theory</a></li>
+      <li><a href="#obj">Objective</a></li>
+      <li><a href="#man">Manual</a></li>
+      <li><a href="#proc">Procedure</a></li>
+      <li><a href="#further-reading">Further Reading</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-10 lab-manual">
+    <div id="intro" class="manual-section">
+      <p class="manual-section-title">Introduction</p><hr />
+      <div class="manual-section-description">
+      	<p>In this experiment, you are asked to design the triple DES cryptosystem provided that you are given an implementation of DES.</p>
+      </div>
+    </div>
+
+    <div id="theory" class="manual-section">
+      <p class="manual-section-title">Theory</p><hr />
+      <div class="manual-section-description"> <p>For a very brief theory of Digital encryption Standard and their analysis, click <a href="media/DES1.pdf">here</a></p><br>
+      <a href="media/DES1.pdf"><img src="../images/image7.png" alt="here"/></a>
+<br><br>
+      </div>
+    </div>
+    <div id="obj" class="manual-section">
+      <p class="manual-section-title">Objective</p><hr />
+      <div class="manual-section-description">
+        <p>
+           <p>
+			<p>           To understand how to convert a DES implementation to a triple-DES implementation
+
+          </p> 
+      </div>
+    </div>
+
+    <div id="man" class="manual-section">
+      <p class="manual-section-title">Manual</p><hr />
+      <div class="manual-section-description">
+        <p> 
+           <b>Step 1:</b> Generate Plaintext <b>m</b>, <b>keyA</b> and <b>keyB</b> by clicking on rexpective buttons <b>PART I</b> of the simulation page.  <br><br>
+        <b>Step 2:</b> Enter generated Plaintext <b>m</b> from <b>PART I</b> to <b>PART II</b> in "Your text to be encrypted/decrypted:" block. <br><br>
+        <b>Step 3:</b> Enter generated <b>keyA</b> from <b>PART I</b> to <b>PART II</b>  "Key to be used:" block and click on DES encrpt button to output ciphertext <b>c1</b>.This is First Encryption. <br><br>
+        <b>Step 4:</b> Enter generated ciphertext <b>c1</b> from <b>PART II</b>  "Output:" Block to <b>PART II</b> in "Your text to be encrypted/decrypted:" block.  <br><br>
+        <b>Step 5:</b> Enter generated <b>keyB</b> from <b>PART I</b> to <b>PART II</b> in "Key to be used:" block and click on DES decrypt button to output ciphertect <b>c2</b>.This is Second Encryption. <br><br>
+        <b>Step 6:</b> Enter generated  ciphertext <b>c2</b> from <b>PART II</b>  "Output:" block to <b>PART II</b> in "Your text to be encrypted/decrypted:" block. <br><br>
+        <b>Step 7:</b> Enter generated <b>keyA</b> from <b>PART I</b> to <b>PART II</b>  "Key to be used:" block and click on DES encrpt button to output ciphertext <b>c3</b>.This is Third Encryption. As Encryption is done thrice.This Scheme is called triple DES.<br><br>
+        <b>Step 8:</b> Enter generated ciphertext <b>c3</b> from <b>PART II</b> "Output:" Block to  <b>PART III</b> "Enter your answer here:" block inorder to verify your Triple DES.<br><br> 
+            </p>
+
+      </div>
+    </div>
+
+    <div id="proc" class="manual-section">
+      <p class="manual-section-title">Procedure</p><hr />
+      <div class="manual-section-description">
+        <p>
+	      Procedure for the experiment is given in manual.
+	    </p>            
+      </div>
+    </div>
+
+    <div id="further-reading" class="manual-section">
+      <p class="manual-section-title">Further Reading</p><hr />
+      <div class="manual-section-description">
+        <ul>	
+              <li>
+                <a href=http://en.wikipedia.org/wiki/Triple_DES>Wikipedia On Triple DES</a>
+              </li>
+              <li>
+               <a href=http://en.wikipedia.org/wiki/Data_Encryption_Standard>Wikipedia On DES</a>
+              </li> 
+              <li>
+               Introduction to Modern Cryptography by Jonathan Katz and Yehuda Lindell.
+              </li> 
+              <li>
+                <a href=http://www.cs.berkeley.edu/~luca/cs276/lecture10draft.pdf>Notes on AES</a>
+              </li>
+              
+        </ul>
+      </div>
+    </div>
+  </div></div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

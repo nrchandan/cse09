@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diffie-Hellman Key Establishment</title>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Diffie-Hellman Key Establishment</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+    <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title">Diffie-Hellman Key Establishment</p>
+    </div>
+
+      <div class="manual-section">
+        <p class="manual-section-title">Simulation</p><hr />
+        <div class="manual-section-description">
+        <!--<script type="text/javascript" src="../js/exp1.js"></script>-->
+            
+    <form name="stuff">
+      <p>Public Information:</p> <br>
+      <p>Prime Number: </p>
+      <p><input id="prime" value="" size="20" readonly="readonly" type="text">
+          <input value="Generate Prime" onclick="nextPrime();" type="button"></p> <br>
+      <p>Generator G:</p> <p><input id="generator" value="" size="20" readonly="readonly" type="text">
+          <input value="Another Generator" onclick="nextGenerator();" type="button"></p> <br>
+         <table style="float: left;">
+          <tbody>
+        <tr><td><center><font color="red">Alice</font></center></td>
+            </tr>
+            <tr>
+        <td valign="top">Key: <input id="keyA" value="" size="20" readonly="readonly" type="text">
+            <input value="Generate A" onclick="nextKeyA();" type="button"></td>
+            </tr>
+            <tr>
+        <td><input id="encryptA" value="" size="20" readonly="readonly" type="text">
+            <input value="Calculate Ga" onclick="calculateGA();" type="button"></td>
+            </tr>
+            <tr>
+            <td><input value="Send Ga to B" onclick="sendA();" type="button"></td>
+            </tr>
+            <tr>
+        <td>Received: <input id="receivedA" value="" size="20" readonly="readonly" type="text"></td>
+            </tr>
+            <tr>
+            <td><input value="Calculate Gab" onclick="calculateGAB();" type="button">
+            <input id="encryptAB" value="" size="20" readonly="readonly" type="text"></td>
+            </tr>
+          </tbody>
+           </table> 
+        
+        
+           <table style="float: right;">
+          <tbody>
+        <tr><td><center><font color="red">Bob</font></center></td>
+            </tr>
+            <tr>
+        <td valign="top">Key: <input id="keyB" value="" size="20" readonly="readonly" type="text">
+            <input value="Generate B" onclick="nextKeyB();" type="button"></td>
+            </tr>
+            <tr>
+        <td><input id="encryptB" value="" size="20" readonly="readonly" type="text">
+            <input value="Calculate Gb" onclick="calculateGB();" type="button"></td>
+            </tr>
+            <tr>
+            <td><input value="Send Gb to A" onclick="sendB();" type="button"></td>
+            </tr>
+            <tr>
+        <td>Received: <input id="receivedB" value="" size="20" readonly="readonly" type="text"></td>
+            </tr>
+            <tr>
+            <td><input value="Calculate Gba" onclick="calculateGBA();" type="button">
+            <input id="encryptBA" value="" size="20" readonly="readonly" type="text"></td>
+            </tr>
+          </tbody>
+            </table>
+      <p style="clear:both;">
+        
+    </form>
+        </div>
+    </div>
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="../js/key_sharing.js"></script>  
+<script type="application/javascript" src="../js/key_sharing.js"></script>
+  </body>
+</html>

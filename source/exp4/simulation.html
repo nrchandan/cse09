@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message Authentication Codes</title>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+  </head>
+  <body>
+
+  <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Message Authentication Codes</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+    <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title">Message Authentication Codes</p>
+    </div>
+
+      <div class="manual-section">
+        <p class="manual-section-title">Simulation</p><hr />
+        <div class="manual-section-description">
+            <pre>   Plaintext: <textarea name="plaintext" cols="50" rows="4" readonly="readonly" id="plaintext">1100000000111100101010</textarea>   <input name="changePlainText" value="Next Plaintext" onclick="next_plain_text()" type="button"> <br>
+      Key, k: <textarea name="key" cols="50" rows="1" readonly="readonly" id="key">11100100</textarea>   <input name="changeKey" value="Next Key" onclick="next_key()" type="button"><br>
+length of Initialization Vector (IV), l, <textarea name="l" cols="4" rows="1" id="l">4</textarea> where l &lt; (the length of plaintext above)/2 <br>
+          IV: <textarea name="iv" cols="50" rows="1" readonly="readonly" id="iv">1100</textarea>   <input name="changeIV" value="Next IV" onclick="next_IV()" type="button"><br><br><br>
+Put your text of size l to get the corresponding value of F<sub>k</sub>(text) of size l.<br>
+   Your text: <textarea name="usertext" cols="50" rows="1" id="usertext">11001010</textarea>   <input name="applyFunction" value="Apply Function" onclick="apply_function()" type="button">        <input name="nextFunction" value="Choose another Function" onclick="next_function()" type="button">
+Function output: <textarea name="functionvalue" cols="50" rows="1" readonly="readonly" id="functionvalue"></textarea><br><br>
+Final Output: <textarea name="output" cols="50" rows="1" id="outputarea"></textarea> <input name="checkAnswer" value="Check Answer!" onclick="CheckAnswer()" type="button">
+<br><br></pre>
+<p style="font-weight: bold; text-decoration: underline; font-style: italic; text-align: center;">SECOND PART OF THE EXPERIMENT</p>
+
+<br>
+<pre></pre>
+
+
+<p>Select the option you would use to make CBC-MAC secure </p><br>
+<p>
+<select id="secureOptions" onchange="select();">
+  <option value="key" selected="selected">Compute and use your key</option>
+  <option value="length">Prepend the message with its length</option>
+  <option value="keys">Two keys</option>
+</select>
+</p>  
+<pre>      Plaintext: <textarea name="plaintext" cols="50" rows="4" readonly="readonly" id="plaintext">1100000000111100101010</textarea>   <input name="changePlainText" value="Next Plaintext" onclick="next_plain_text()" type="button"> <br>
+   <div id="user_message" style="color: red;">
+ Your Plaintext: <textarea name="plaintext" cols="50" rows="4" id="plaintext"></textarea> <br>
+    </div>
+            Key: <textarea name="key" cols="50" rows="1" readonly="readonly" id="key">11100100</textarea>   <input name="changeKey" value="Another Key" onclick="next_key()" type="button"><br>
+  <div id="userKey" style="color: red;">
+ Calculated Key: <textarea name="key" cols="50" rows="1" id="key"></textarea> <br> </div>
+  <div id="key_generated2" style="color: red;">
+     Second Key: <textarea name="key2" cols="50" rows="1" readonly="readonly" id="key2">11100100</textarea>   <input value="Another Key" onclick="next_key2()" type="button"><br> </div>
+
+length of Initialization Vector (IV), l, <textarea name="l" cols="4" rows="1" id="l">4</textarea> where l &lt; (the length of plaintext above)/2 <br>
+             IV: <textarea name="iv" cols="50" rows="1" readonly="readonly" id="iv">1100</textarea>   <input name="changeIV" value="Next IV" onclick="next_IV()" type="button"><br><br><br>
+Put your text of size l to get the corresponding value of F<sub>k</sub>(text) of size l.<br>
+      Your text: <textarea name="usertext" cols="50" rows="1" id="usertext">11001010</textarea>   <input name="applyFunction" value="Apply Function" onclick="apply_function()" type="button">
+                                <input name="nextFunction" value="Next Function" onclick="next_function()" type="button">
+Function output: <textarea name="functionvalue" cols="50" rows="1" readonly="readonly" id="functionvalue"></textarea><br><br>
+   Final Output: <textarea name="output" cols="50" rows="1" id="outputarea"></textarea>
+
+
+                </pre>
+        </div>
+    </div>
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="../js/cbc-mac.js"></script>
+    <script type="application/javascript" src="../js/secure_cbc-mac.js"></script>
+  </body>
+</html>
