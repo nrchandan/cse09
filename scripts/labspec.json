@@ -29,7 +29,7 @@
         "service_pack": "",
         "installer": ["sudo apt-get -y install pip"],
         "build_steps": {
-          "configure": ["cp -fr /root/VMManager/cse09/source/ /var/www/"],
+          "configure": ["cp -fr /lab/cse09/source/ /var/www/"],
           "pre_build": ["make clean"],
           "build": ["make lab", "make install"],
           "post_build": ["make clean"],
