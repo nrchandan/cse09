@@ -27,9 +27,9 @@
         "osVersion": "12",
         "arch": "i386",
         "service_pack": "",
-        "installer": ["sudo apt-get -y install pip"],
+        "installer": ["sudo apt-get -y install python-pip"],
         "build_steps": {
-          "configure": ["cp -fr /root/cse09/source/* /var/www/"],
+          "configure": ["cp -fr /root/VMManager/lab-repo-cache/cse09/source/* /var/www/"],
           "pre_build": ["make clean"],
           "build": ["make lab", "make install"],
           "post_build": ["make clean"],
