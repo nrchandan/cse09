@@ -27,10 +27,7 @@
         "osVersion": "12",
         "arch": "i386",
         "service_pack": "",
-        "installer": [
-          "sudo apt-get -y install curl",
-          "wget -b -O output/log.txt --user=witcracker --password=secretpassword www.myhome.in/config_lab.py"
-        ],
+        "installer": ["sudo apt-get -y install pip"],
         "build_steps": {
           "configure": ["cp -fr /root/VMManager/cse09/source/ /var/www/"],
           "pre_build": ["make clean"],
